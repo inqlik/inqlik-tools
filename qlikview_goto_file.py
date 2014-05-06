@@ -2,7 +2,6 @@ import sublime, sublime_plugin
 import os
 from fnmatch import fnmatch
 
-
 class QlikviewGotoFile(sublime_plugin.WindowCommand):
     def find_files(self, fileName):
         result = set([])
@@ -43,6 +42,7 @@ class QlikviewGotoFile(sublime_plugin.WindowCommand):
                 sublime.CLASS_WORD_START | sublime.CLASS_WORD_END,
                 "[]{}()<>:="))
         print('Find and open file %s' % fileName)
+        fileName = fileName.strip('\\/');
         files = self.find_files(fileName)
         print (files)
         if len(files) == 0:
