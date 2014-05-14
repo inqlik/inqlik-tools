@@ -1,8 +1,8 @@
 <snippet><description>New QlikView Expression (YAML)</description><tabTrigger>---</tabTrigger><scope>source.qlikview-vars</scope><content>
 <![CDATA[---
-SET: $1
-Definition: $2
-Label: $3
-Comment: $4
+set: $1
+definition: $2
+label: $3
+comment: $4
 ]]>
 </content></snippet>
