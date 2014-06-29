@@ -1,8 +1,16 @@
 ###Changelog
 
-####0.1.25
+####0.1.29
 
 - Added autocompletion for most functions with cuues for parameters
+
+####0.1.28
+
+- Bugfix in NewExpression snippet
+
+####0.1.27
+
+- Bugfix in goto_files
 
 ####0.1.24
 
