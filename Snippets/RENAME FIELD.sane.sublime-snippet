@@ -1,0 +1,3 @@
+<snippet><description>RENAME FIELD</description><tabTrigger>rename field</tabTrigger><scope>source.qvs</scope><content>
+<![CDATA[RENAME FIELD ${1:FieldFrom} TO ${2:FieldTo};$0]]>
+</content></snippet>

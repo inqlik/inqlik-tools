@@ -1,0 +1,3 @@
+<snippet><description>DROP FIELD</description><tabTrigger>drop field</tabTrigger><scope>source.qvs</scope><content>
+<![CDATA[DROP FIELD ${1:FieldName};$0]]>
+</content></snippet>

@@ -1,0 +1,19 @@
+{
+  "scope": "meta.expression.qlikview-vars" ,
+  "completions":
+  [
+    {"trigger": "GetActiveSheetID", "contents": "GetActiveSheetID()$0"},
+    {"trigger": "GetCurrentField", "contents": "GetCurrentField(${1:groupname})$0"},
+    {"trigger": "GetFieldSelections", "contents": "GetFieldSelections('${1:fieldName}',${2:','},${3:6})$0"},
+    {"trigger": "GetSelectedCount", "contents": "GetSelectedCount('${1:fieldName}')$0"},
+    {"trigger": "GetPossibleCount", "contents": "GetPossibleCount('${1:fieldName}')$0"},
+    {"trigger": "GetExcludedCount", "contents": "GetExcludedCount('${1:fieldName}')$0"},
+    {"trigger": "GetAlternativeCount", "contents": "GetAlternativeCount('${1:fieldName}')$0"},
+    {"trigger": "GetNotSelectedCount", "contents": "GetNotSelectedCount('${1:fieldName}')$0"},
+    {"trigger": "GetExtendedProperty", "contents": "GetExtendedProperty('${1:name}','${2:objectID}')$0"},
+    {"trigger": "StateName", "contents": "StateName()$0"},
+    {"trigger": "DocumentTitle", "contents": "DocumentTitle()$0"},
+    {"trigger": "GetObjectField", "contents": "GetObjectField('${1:index}')$0"},
+    {"trigger": "GetCurrentSelections", "contents": "GetCurrentSelections(${1:chr(13)},${2:':'},${3:','},${4:6})$0"}
+  ]
+}

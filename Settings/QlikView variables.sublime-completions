@@ -1,0 +1,26 @@
+{
+  "scope": "meta.newtag.qlikview-vars" ,
+
+  "completions":
+  [
+    {"trigger": "comment:", "contents": "comment: $0"},
+    {"trigger": "label:", "contents": "label: $0"},
+    {"trigger": "definition:", "contents": "definition: $0"},
+    {"trigger": "backgroundColor:", "contents": "backgroundColor: $0"},
+    {"trigger": "tag:", "contents": "tag: $0"},
+    {"trigger": "fontColor:", "contents": "fontColor: $0"},
+    {"trigger": "textFormat:", "contents": "textFormat: $0"},
+    {"trigger": "macro:", "contents": "macro: $0"},
+    {"trigger": "description:", "contents": "description: $0"},
+    {"trigger": "enableCondition:", "contents": "enableCondition: $0"},
+    {"trigger": "showCondition:", "contents": "showCondition: $0"},
+    {"trigger": "sortBy:", "contents": "sortBy: $0"},
+    {"trigger": "visualCueUpper:", "contents": "visualCueUpper: $0"},
+    {"trigger": "visualCueUpper:", "contents": "visualCueUpper: $0"},
+    {"trigger": "visualCueUpper:", "contents": "visualCueUpper: $0"},
+    {"trigger": "visualCueUpper:", "contents": "visualCueUpper: $0"},
+    {"trigger": "visualCueLower:", "contents": "visualCueLower: $0"}
+  ]
+}
+
+

@@ -1,0 +1,30 @@
+{
+  "scope": "source.qvs" ,
+  "completions":
+  [
+    {"trigger": "FileBasename", "contents": "FileBasename()$0"},
+    {"trigger": "FileDir", "contents": "FileDir()$0"},
+    {"trigger": "FileExtension", "contents": "FileExtension()$0"},
+    {"trigger": "GetFolderPath", "contents": "GetFolderPath()$0"},
+    {"trigger": "FileName", "contents": "FileName()$0"},
+    {"trigger": "FilePath", "contents": "FilePath()$0"},
+    {"trigger": "FileSize", "contents": "FileSize('${1:filename}')$0"},
+    {"trigger": "FileTime", "contents": "FileTime('${1:filename}')$0"},
+    {"trigger": "QvdCreateTime", "contents": "QvdCreateTime('${1:filename}')$0"},
+    {"trigger": "NoOfFields", "contents": "NoOfFields('${1:filename}')$0"},
+    {"trigger": "NoOfRows", "contents": "NoOfRows('${1:filename}')$0"},
+    {"trigger": "NoOfTables", "contents": "NoOfTables()$0"},
+    {"trigger": "TableName", "contents": "TableName(${1:tableNumber})$0"},
+    {"trigger": "QvdNoOfRecords", "contents": "QvdNoOfRecords('${1:filename}')$0"},
+    {"trigger": "QvdNoOfFields", "contents": "QvdNoOfFields('${1:filename}')$0"},
+    {"trigger": "QvdFieldName", "contents": "QvdFieldName('${1:filename},${2:fieldNo}')$0"},
+    {"trigger": "QvdTableName", "contents": "QvdTableName('${1:filename}')$0"},
+    {"trigger": "FieldName", "contents": "FieldName(${1:fieldNo},'${2:tableName}')$0"},
+    {"trigger": "FieldNumber", "contents": "FieldNumber('${1:field}','${2:tableName}')$0"},
+    {"trigger": "ConnectString", "contents": "ConnectString()$0"},
+    {"trigger": "IsPartialReload", "contents": "IsPartialReload()$0"},
+    {"trigger": "MsgBox", "contents": "MsgConnectString:msg}')$0"},
+    {"trigger": "Attribute", "contents": "Attribute('${1:filename}','${2:attributename}')$0"},
+    {"trigger": "Input", "contents": "Input('${1:cue}','${2:caption}')$0"},
+  ]
+}

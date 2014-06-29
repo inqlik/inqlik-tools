@@ -1,5 +1,9 @@
 ###Changelog
 
+####0.1.25
+
+- Added autocompletion for most functions with cuues for parameters
+
 ####0.1.24
 
 - Tabular cvs format added for Expression Editor
