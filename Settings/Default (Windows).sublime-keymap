@@ -3,6 +3,8 @@
   	"context": [{ "key": "selector", "operator": "equal", "operand": "source.qvs" }]},
   {"keys": ["ctrl+shift+l"], "command": "qlikview_transform_log", 
   	"context": [{ "key": "selector", "operator": "equal", "operand": "source.qvw.log" }]},
+  {"keys": ["ctrl+shift+s"], "command": "qlikview_variables_export", 
+    "context": [{ "key": "selector", "operator": "equal", "operand": "source.qlikview-vars" }]},
   {"keys": ["f12"], "command": "qlikview_goto_definition", 
   	"context": [{ "key": "selector", "operator": "equal", "operand": "source.qvs"}]},
   {"keys": ["f12"], "command": "qlikview_goto_definition", 

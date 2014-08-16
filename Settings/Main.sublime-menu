@@ -16,6 +16,10 @@
                             {
                                 "command": "qlikview_transform_log", 
                                 "caption": "Reformat qvw.log file"
+                            },
+                            {
+                                "command": "qlikview_variables_export", 
+                                "caption": "Expand variables and export file"
                             }
                         ], 
                         "id": "qlikview", 

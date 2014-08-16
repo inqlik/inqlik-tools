@@ -48,7 +48,6 @@ class QlikviewVariableFileListener(sublime_plugin.EventListener):
             f = open(path, 'rb')
         read = f.read()
         f.close()
-#        self.reader.parse_content(read)
 
         try:
             self.reader.parse_content(read)
@@ -76,6 +75,7 @@ class QlikviewVariableFileListener(sublime_plugin.EventListener):
             sublime.error_message('Unknown output_format %s. Known formats are QDF (Csv file QlikView Deployment framework), QVS (Plain include script), CVS (Plain tabular csv)')
         outPath = path.replace(self.EXT_QLIKVIEW_VARS,outExt)
         self.regenerate_tab_file_content(path, onload=onload)
+
         f = None
         if self.is_ST3():
             if output_mode == 'QDF':
@@ -152,7 +152,6 @@ class QlikviewVariablesExportCommand(sublime_plugin.WindowCommand):
             f = open(path, 'rb')
         read = f.read()
         f.close()
-#        self.reader.parse_content(read)
 
         try:
             self.reader.parse_content(read)

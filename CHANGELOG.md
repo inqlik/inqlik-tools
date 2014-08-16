@@ -1,8 +1,15 @@
 ###Changelog
 
+####0.1.30
+
+- Some changes in auto-completion for functions
+- Added menu command and key combination for command `Expand variables and export file` in Expression editor
+- Plain QVS export format temporarily removed from Expression Editor.
+- `.no-sublime-package` file flag added to project. Packaged format sometimes lead to bugs. 
+
 ####0.1.29
 
-- Added autocompletion for most functions with cuues for parameters
+- Added auto-completion for most functions with cues for parameters
 
 ####0.1.28
 
