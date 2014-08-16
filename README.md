@@ -137,6 +137,38 @@ In qlikview-vars files expression names (name after `LET` or `SET` tag) marked a
 
 Minimal syntax checks provided: Checks for mandatory tags, checks for uniqueness of expression names  
 
+####Expand variables mode
+
+Given expressions 
+
+```
+---
+set: SalesSum
+definition: Sum({<OperationType={Sale}>} Amount)
+label: Sales
+comment: Sales amount
+---
+set: CostSum
+definition: Sum({<OperationType={Cost}>} Amount)
+label: Cost
+comment: Cost amount
+---
+set: MarginAmout
+definition: ($(SalesSum) - $(CostSum))
+label: Margin
+comment: Margin amount
+```
+Expression `MarginAmount` defined in terms of expressions `SalesSum` and `CostSum`. Normally `MarginAmount` would be exported in same form to csv file. So in `QDF` format it would be
+
+```
+SET MarginAmout,($(SalesSum) - $(CostSum)),,
+```
+You can expand variables before export expressions (Menu command `Tools\Packages\InQlik-Tools\Expand variables and export file` or `Ctrl-Shift-S` key combination). So target expression in export file would be 
+
+```
+SET MarginAmout,(Sum({<OperationType={Sale}>} Amount) - Sum({<OperationType={Cost}>} Amount)),,
+```
+
 
 ## Installation :
 
@@ -146,13 +178,13 @@ For all Sublime Text 2/3 users we recommend install via [Package Control][1].
 
 1. [Install][2] Package Control if you haven't yet.
 2. Use `Ctrl+Shift+P` then `Package Control: Install Package`
-3. Look for `QlikView Tools` and install it.
+3. Look for `InQlik-Tools` and install it.
 
 ### Manual Install
 
 1. Click the `Preferences > Browse Packages…` menu
 2. Browse up a folder and then into the `Installed Packages/` folder
-3. Download [zip package][3] rename it to `InQlik-Tools.sublime-package` and copy it into the `Installed Packages/` directory
+3. Download [zip package][3] and extract its content into `InQlik-Tools` directory in this folder. (Check that README.md is immediately under `InQlik-Tools' folder not in nested folder)
 4. Restart Sublime Text
 
 [Last changes](CHANGELOG.md)
