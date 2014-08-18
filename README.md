@@ -61,7 +61,7 @@ While you editing qvs script file `Ctrl-Shift-L` key combination or menu command
 
 ##Expression Editor: Language plugin for editing QlikView expressions and variables
 
-Article about Expression Editor with downloadable sample project placed [here](http://community.qlik.com/docs/DOC-6033) and [here](http://inqlik.github.io/2014/02/expression-editor/) 
+*Article about Expression Editor with downloadable sample project placed [here](http://community.qlik.com/docs/DOC-6033) and [here](http://inqlik.github.io/2014/02/expression-editor/)* 
 
 Expression editor used to write and store QlikView variables in convenient form.
 Expression editor use YAML like format.
