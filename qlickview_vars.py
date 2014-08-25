@@ -69,10 +69,10 @@ class QlikviewVariableFileListener(sublime_plugin.EventListener):
             outExt = self.EXT_QLIKVIEW_QDF_CSV
         elif output_mode == 'QVS':
             outExt = self.EXT_QLIKVIEW_VARS_QVS
-        elif output_mode == 'CVS':
+        elif output_mode == 'CSV':
             outExt = self.EXT_QLIKVIEW_TABLE_CSV
         else:
-            sublime.error_message('Unknown output_format %s. Known formats are QDF (Csv file QlikView Deployment framework), QVS (Plain include script), CVS (Plain tabular csv)')
+            sublime.error_message('Unknown output_format %s. Known formats are QDF (Csv file QlikView Deployment framework), QVS (Plain include script), CSV (Plain tabular csv)')
         outPath = path.replace(self.EXT_QLIKVIEW_VARS,outExt)
         self.regenerate_tab_file_content(path, onload=onload)
 
@@ -80,7 +80,7 @@ class QlikviewVariableFileListener(sublime_plugin.EventListener):
         if self.is_ST3():
             if output_mode == 'QDF':
                 enc = 'utf-8'
-            elif output_mode == 'CVS':
+            elif output_mode == 'CSV':
                 enc = 'utf-8-sig'
             else: 
                 enc = 'utf-8-sig'
@@ -107,7 +107,7 @@ class QlikviewVariableFileListener(sublime_plugin.EventListener):
                 varName = row[1]
                 line = "%s %s = %s;\n" % (command,varName,exp) 
                 f.write(line)
-        elif output_mode == 'CVS':
+        elif output_mode == 'CSV':
             writer = csv.writer(f)
             writer.writerow(['ExpressionName','Label','Comment','Description','Section','Definition'])
             for exp in self.reader.expressions:
@@ -173,17 +173,17 @@ class QlikviewVariablesExportCommand(sublime_plugin.WindowCommand):
             outExt = self.EXT_QLIKVIEW_QDF_CSV
         elif output_mode == 'QVS':
             outExt = self.EXT_QLIKVIEW_VARS_QVS
-        elif output_mode == 'CVS':
+        elif output_mode == 'CSV':
             outExt = self.EXT_QLIKVIEW_TABLE_CSV
         else:
-            sublime.error_message('Unknown output_format %s. Known formats are QDF (Csv file QlikView Deployment framework), QVS (Plain include script), CVS (Plain tabular csv)')
+            sublime.error_message('Unknown output_format %s. Known formats are QDF (Csv file QlikView Deployment framework), QVS (Plain include script), CSV (Plain tabular csv)')
         outPath = path.replace(self.EXT_QLIKVIEW_VARS,outExt)
         self.regenerate_tab_file_content(path, onload=onload)
         f = None
         if self.is_ST3():
             if output_mode == 'QDF':
                 enc = 'utf-8'
-            elif output_mode == 'CVS':
+            elif output_mode == 'CSV':
                 enc = 'utf-8-sig'
             else: 
                 enc = 'utf-8-sig'
@@ -211,7 +211,7 @@ class QlikviewVariablesExportCommand(sublime_plugin.WindowCommand):
                 varName = row[1]
                 line = "%s %s = %s;\n" % (command,varName,exp) 
                 f.write(line)
-        elif output_mode == 'CVS':
+        elif output_mode == 'CSV':
             writer = csv.writer(f)
             writer.writerow(['ExpressionName','Label','Comment','Description','Section','Definition'])
             for exp in self.reader.expressions:

@@ -1,5 +1,10 @@
 ###Changelog
 
+####0.1.31
+
+- Bugfix for tabular csv export format for Expression Editor. Export format was erroneously named `CVS` both in README and in plugin code.
+Name for tabular csv format fixed and changed to `CSV`
+
 ####0.1.30
 
 - Some changes in auto-completion for functions
@@ -21,7 +26,7 @@
 
 ####0.1.24
 
-- Tabular cvs format added for Expression Editor
+- Tabular CSV format added for Expression Editor
 
 ####0.1.23
 

@@ -77,7 +77,7 @@ Expression editor highlight both syntax for it format and syntax of QlikView exp
 On every save plugin autogenerate external file in one of available formats:
 
 - Csv variable file in format used by QlikView Deployment Framework (by `LoadVariableCSV` subroutine). That is default option `QDF`.
-- Csv file in table format (option `CVS`), each row corresponds to whole expression and contains fields
+- Csv file in table format (option `CSV`), each row corresponds to whole expression and contains fields
   - Name
   - Definition
   - Label
