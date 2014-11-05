@@ -27,5 +27,9 @@
     {"trigger": "MsgBox", "contents": "MsgConnectString:msg}')$0"},
     {"trigger": "Attribute", "contents": "Attribute('${1:fileName}','${2:attributename}')$0"},
     {"trigger": "Input", "contents": "Input('${1:cue}','${2:caption}')$0"},
+    {"trigger": "QV_SKIP_PARSING", "contents": "//#!QV_SKIP_PARSING"},
+    {"trigger": "QV_TRACE_TABLES", "contents": "//#!QV_TRACE_TABLES"},
+    {"trigger": "QV_SUPPRESS_ERROR", "contents": "//#!QV_SUPPRESS_ERROR"},
+    {"trigger": "QV_TRACE_USER_VARIABLES", "contents": "//#!QV_TRACE_USER_VARIABLES"}
   ]
 }
