@@ -246,6 +246,7 @@ class QvVarFileReader:
         self.output = []
         self.define_directives = {}
         self.modulesettings = modulesettings
+        self.currentSection = ''
     def put_row(self, key, value, command, comment, priority):
             self.output.append([command.upper(), key ,value, comment, priority])
     def parse_content(self,text):
@@ -297,7 +298,9 @@ class QvVarFileReader:
             exp['definition'] = local_def
             defs[exp['name']] = exp['definition']
             comment = exp.get('Description')
-            tag = exp.get('Tag')
+            tag = exp.get('tag')
+            if tag is None:
+                tag = self.currentSection
             command = exp.get('command')
             name = exp.get('name')
             self.expressions.append(exp)
@@ -333,6 +336,7 @@ class QvVarFileReader:
             if line.strip()=='':
                 continue
             if (line.startswith('#SECTION ')):
+                self.currentSection = re.sub("#SECTION :?", "", line)
                 continue
             match = self.line_template.match(line)
             if match is None:
