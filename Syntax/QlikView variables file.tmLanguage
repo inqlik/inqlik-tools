@@ -142,7 +142,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>^\s*(set|let):\s*(\w[A-Xa-x0-9_.]+)\s*$</string>
+					<string>^\s*(set|let):\s*(\w[\w_.]+)\s*$</string>
 				</dict>
 			</array>
 		</dict>
