@@ -79,7 +79,7 @@ repository:
 
   expressionName:
     patterns:
-    - match: ^\s*(set|let):\s*(\w+)\s*$
+    - match: ^\s*(set|let):\s*(\w[A-Xa-x0-9_.]+)\s*$
       captures:
         '1': {name: support.constant.qlikview-vars}
         '2': {name: support.variable.qlikview-vars entity.name.type.expression.qlikview-vars}
