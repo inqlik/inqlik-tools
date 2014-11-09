@@ -101,7 +101,7 @@ class QlikviewVariableFileListener(sublime_plugin.EventListener):
                     command = 'let'
                     exp = exp.replace("'","~~~")
                     exp = exp.replace("$(","@(")
-                    exp = "replace(replace('%s','~~~', 'chr(39)'), '@(', chr(36) & '(')" % exp
+                    exp = "replace(replace('%s','~~~', chr(39)), '@(', chr(36) & '(')" % exp
                 else:
                     command = row[0]
                 varName = row[1]
@@ -205,7 +205,7 @@ class QlikviewVariablesExportCommand(sublime_plugin.WindowCommand):
                     command = 'let'
                     exp = exp.replace("'","~~~")
                     exp = exp.replace("$(","@(")
-                    exp = "replace(replace('%s','~~~', 'chr(39)'), '@(', chr(39) & '(')" % exp
+                    exp = "replace(replace('%s','~~~', chr(39)), '@(', chr(36) & '(')" % exp
                 else:
                     command = row[0]
                 varName = row[1]
