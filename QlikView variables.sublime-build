@@ -1,0 +1,12 @@
+{
+	"cmd": ["inqlik.bat", "exp","$file"],
+  "encoding": "utf8",
+  "file_regex": "^>+ Parse error. File: \"(...*?)\", line: ([0-9]*)",
+  "selector": "source.qlikview-vars",
+      "variants": [
+      {
+        "name": "Run",
+        "cmd": ["inqlik.bat", "exp","$file"],
+      } 
+    ]
+}
