@@ -10,5 +10,10 @@
   {"keys": ["f12"], "command": "qlikview_goto_definition", 
   	"context": [{ "key": "selector", "operator": "equal", "operand": "source.qvw.log"}]},
   {"keys": ["ctrl+f12"], "command": "qlikview_goto_file",
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.qvs"}]}
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.qvs"}]},
+  {"keys": ["ctrl+shift+b"], "command": "qlikview_reload","args": {"commandVariant": "open"},
+    "context": [{ "key": "selector", "operator": "equal", "operand": "source.qvs"}]},
+  {"keys": ["f7"], "command": "qlikview_reload",
+    "context": [{ "key": "selector", "operator": "equal", "operand": "source.qvs"}]}
+  
 ]

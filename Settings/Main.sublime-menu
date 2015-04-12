@@ -50,7 +50,7 @@
                             },
                             {
                                 "args": {
-                                    "file": "${packages}/InQlik-Tools/QlikView variables file.sublime-settings"
+                                    "file": "${packages}/Inqlik-Tools/Settings/QlikView variables file.sublime-settings"
                                 }, 
                                 "command": "open_file", 
                                 "caption": "QlikView Variables file settings: Default"
