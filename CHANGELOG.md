@@ -1,6 +1,6 @@
 ###Changelog
 
-####0.1.32
+####0.1.37
 
 - Sublime Text introduced serious regression in default Build Systems behaviour. Default key binding `F7` and `Ctrl-Shift-B` currently not run alternative build tasks (`Reload` and `Open qvw file` in case if former build system for QVS files) but pops up some menu with some commmand variants. In this version I recover previous behaviour using basic syntax specific key-bindings. `F7` silently run `Reload` command. `Ctrl-Shift-B` run `Open qvw file` command as in previous revisions of ST3.
 - Plugin optionally can use `Inqlik CLI` command line utility for some tasks. That utility now shipped with package
@@ -8,6 +8,27 @@
 - QlikView script settings extended to provide options for using `Inqlik CLI` for `Reload` and `Open qvw file` tasks. `Reload` task can include check syntax phase 
 - Inqlik CLI supports сustom file name in relative build paths. [See feature request](https://github.com/inqlik/inqlik-tools/issues/5)
 - Package settings defaults to using old python code for reload and open qvw file tasks
+
+####0.1.36
+
+- Add build system for Expression files. Use external (Inqlik CLI) tool
+
+####0.1.35
+
+- Bugfix for https://github.com/inqlik/inqlik-tools/issues/3
+
+####0.1.34
+
+- Bugfix for https://github.com/inqlik/inqlik-tools/issues/2
+
+
+####0.1.33
+
+- Permit unicode variable names. Again
+
+####0.1.32
+
+- By default TAG column in QDF variables file filled with values from SECTION, it ca be overloaded by explicit tag: tag, Added completions for qvs parser directives. Bugfix for
 
 ####0.1.31
 
