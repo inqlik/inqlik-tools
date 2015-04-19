@@ -1,0 +1,15 @@
+{
+  "qv_executable": "c:\\Program Files\\QlikView\\qv.exe",
+  // If set to false, Open qvw file and Reload qvw file command would run by internal python script
+  // If set to true they would use inqlik command line application (inqlik CLI)
+  "qv_script_use_cli": false,
+  // Use QlikView script syntax checker from inqlik CLI (operative only when "qv_script_use_cli": true)
+  "qv_script_check_syntax": false,
+  // Valid options are 
+  // - "check": Check syntax of qvs file and print out found errors
+  // - "check_and_reload": Check syntax, reload qvw file if errors not found
+  // - "force_reload": Check syntax, reload qvw file even if errors found
+  "qv_script_check_syntax_mode": "check_and_reload",
+  // Implicit include file (use it for example to declare predefined variables of QlikView Deployment Framework) 
+  "qv_script_check_syntax_impicit_include_file": "default_inqlude.qvs"
+}

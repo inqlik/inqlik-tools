@@ -1,5 +1,14 @@
 ###Changelog
 
+####0.1.32
+
+- Sublime Text introduced serious regression in default Build Systems behaviour. Default key binding `F7` and `Ctrl-Shift-B` currently not run alternative build tasks (`Reload` and `Open qvw file` in case if former build system for QVS files) but pops up some menu with some commmand variants. In this version I recover previous behaviour using basic syntax specific key-bindings. `F7` silently run `Reload` command. `Ctrl-Shift-B` run `Open qvw file` command as in previous revisions of ST3.
+- Plugin optionally can use `Inqlik CLI` command line utility for some tasks. That utility now shipped with package
+- `QlikView script settings` items added to `Package settings\Inqlik-Tools` menu.
+- QlikView script settings extended to provide options for using `Inqlik CLI` for `Reload` and `Open qvw file` tasks. `Reload` task can include check syntax phase 
+- Inqlik CLI supports сustom file name in relative build paths. [See feature request](https://github.com/inqlik/inqlik-tools/issues/5)
+- Package settings defaults to using old python code for reload and open qvw file tasks
+
 ####0.1.31
 
 - Bugfix for tabular csv export format for Expression Editor. Export format was erroneously named `CVS` both in README and in plugin code.

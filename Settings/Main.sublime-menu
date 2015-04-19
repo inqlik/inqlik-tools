@@ -64,6 +64,23 @@
                             }, 
                             {
                                 "caption": "-"
+                            },
+                            {
+                                "args": {
+                                    "file": "${packages}/Inqlik-Tools/Settings/QlikView script.sublime-settings"
+                                }, 
+                                "command": "open_file", 
+                                "caption": "QlikView script settings: Default"
+                            }, 
+                            {
+                                "args": {
+                                    "file": "${packages}/User/QlikView script.sublime-settings"
+                                }, 
+                                "command": "open_file", 
+                                "caption": "QlikView script settings: User"
+                            }, 
+                            {
+                                "caption": "-"
                             }
                         ], 
                         "caption": "InQlik-Tools"
