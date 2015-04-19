@@ -1,5 +1,9 @@
 ###Changelog
 
+####0.1.38
+
+- Bugfix for syntax check. Temporarily not using `qv_script_check_syntax_impicit_include_file` setting
+
 ####0.1.37
 
 - Sublime Text in version 3080 introduced serious regression in default Build Systems behaviour. Default key binding `F7` and `Ctrl-Shift-B` currently not run alternative build tasks (`Reload` and `Open qvw file` in case if former build system for QVS files) but pops up some menu with some commmand variants. In this version I recover previous behaviour using basic syntax specific key-bindings. `F7` silently run `Reload` command. `Ctrl-Shift-B` run `Open qvw file` command as in previous revisions of ST3.

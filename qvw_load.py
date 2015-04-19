@@ -51,8 +51,8 @@ class QlikviewReloadCommand(sublime_plugin.WindowCommand):
       if view.settings().get('qv_script_check_syntax') == True:
         cliCommand = view.settings().get('qv_script_check_syntax_mode','force_reload')
         include = view.settings().get('qv_script_check_syntax_impicit_include_file','default_inqlude.qvs')
-      self.window.run_command("exec", { "file_regex": file_regex, "cmd": [scriptPath,"qvs", "--command=%s" % cliCommand, "--include=%s" % include,fileName]})
-      print([scriptPath,"qvs", "--command=%s" % cliCommand, "--include=%s" % include,fileName])
+      self.window.run_command("exec", { "file_regex": file_regex, "cmd": [scriptPath,"qvs", "--command=%s" % cliCommand, fileName]})
+      print([scriptPath,"qvs", "--command=%s" % cliCommand, fileName])
     else:
       self.window.run_command("exec", { "file_regex": file_regex, "cmd": [scriptPath,"qvs", "--command=open",fileName]})
 
