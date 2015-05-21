@@ -5,6 +5,7 @@ import os
 import re
 class QlikviewReloadCommand(sublime_plugin.WindowCommand):
   def run(self, commandVariant=None):
+    self.window.run_command('save')
     view = self.window.active_view()
     qv_executable = view.settings().get("qv_executable","c:\\Program Files\\QlikView\\qv.exe")
     if view.settings().get('qv_script_use_cli') == True:
@@ -12,6 +13,7 @@ class QlikviewReloadCommand(sublime_plugin.WindowCommand):
     else:
       self.runPython(view, qv_executable, commandVariant)
   def runPython(self, view, qv_executable, commandVariant=None):
+    self.window.run_command('save')
     firstLine = view.substr(view.line(0))
     fileName = view.file_name()
     baseName, ext = os.path.splitext(os.path.basename(fileName))
