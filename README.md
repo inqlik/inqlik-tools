@@ -185,9 +185,8 @@ For all Sublime Text 2/3 users we recommend install via [Package Control][1].
 ### Manual Install
 
 1. Click the `Preferences > Browse Packages…` menu
-2. Browse up a folder and then into the `Installed Packages/` folder
-3. Download [zip package][3] and extract its content into `InQlik-Tools` directory in this folder. (Check that README.md is immediately under `InQlik-Tools' folder not in nested folder)
-4. Restart Sublime Text
+2. Download [zip package][3] and extract its content into `InQlik-Tools` directory in this folder. (Check that README.md is immediately under `InQlik-Tools' folder not in nested folder)
+3. Restart Sublime Text
 
 [Last changes](CHANGELOG.md)
 

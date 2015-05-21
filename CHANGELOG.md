@@ -1,5 +1,9 @@
 ###Changelog
 
+####0.1.39
+
+- Autosave current QVS file before reloading. That imitate build system default behaviour
+
 ####0.1.38
 
 - Bugfix for syntax check. Temporarily not using `qv_script_check_syntax_impicit_include_file` setting
