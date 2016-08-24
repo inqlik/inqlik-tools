@@ -1,5 +1,9 @@
 ###Changelog
 
+####0.1.40
+
+- New Expression file export format: JSON. Additional attributes for Infovizion in-house Sense development process
+
 ####0.1.39
 
 - Autosave current QVS file before reloading. That imitate build system default behaviour
