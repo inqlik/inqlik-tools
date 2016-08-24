@@ -1,5 +1,7 @@
 {
   "separator":".",
+  "output_mode": "CSV",
+  "expand_variables": false,
   "mappings": {
     "set": "SET",
     "let": "LET",

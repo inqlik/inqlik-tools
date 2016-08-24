@@ -42,7 +42,7 @@ repository:
   expression:
     patterns:
     - name: meta.expression.qlikview-vars
-      begin: '^(definition|macro|condition|backgroundColor|fontColor|textFormat|enableCondition|showCondition|sortBy|visualCueUpper|visualCueLower|symbol|thousandSymbol|millionSymbol|billionSymbol):'
+      begin: '^(definition|macro|condition|backgroundColor|fontColor|textFormat|enableCondition|showCondition|sortBy|visualCueUpper|visualCueLower|symbol|thousandSymbol|width|millionSymbol|billionSymbol|family|type|selectorLabel):'
       beginCaptures:
         '0': {name: support.constant.qlikview-vars}
       end: ^(?=\S)
