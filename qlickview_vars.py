@@ -160,8 +160,8 @@ class QvVarFileReader:
     ALLOWED_TAGS = ('label','comment', 'definition','backgroundColor','fontColor','textFormat',
         'tag','separator','#define', 'macro','description','enableCondition',
         'showCondition','sortBy','visualCueUpper','visualCueLower','width','symbol',
-        'thousandSymbol','millionSymbol','billionSymbol','family','type', 'selectorLabel')
-    FIELDS_TO_SKIP = ('definition','tag','set','let','command','name','separator','macro','description', 'family', 'type', 'selectorLabel')
+        'thousandSymbol','millionSymbol','billionSymbol','family','type', 'selectorLabel', 'format')
+    FIELDS_TO_SKIP = ('definition','tag','set','let','command','name','separator','macro','description', 'family', 'type', 'selectorLabel', 'format')
     NAME_MAP = {}
 
     line_template = re.compile(r'^(?P<key>\w+?):\s*(?P<val>.*)$')
