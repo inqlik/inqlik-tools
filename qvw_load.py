@@ -8,10 +8,14 @@ class QlikviewReloadCommand(sublime_plugin.WindowCommand):
     self.window.run_command('save')
     view = self.window.active_view()
     qv_executable = view.settings().get("qv_executable","c:\\Program Files\\QlikView\\qv.exe")
+    useInfovizion = view.settings().get("use_infovizion",False)
     if view.settings().get('qv_script_use_cli') == True:
       self.runCli(view, qv_executable, commandVariant)
     else:
-      self.runPython(view, qv_executable, commandVariant)
+      if useInfovizion == True:
+        self.runByInfovizion(view, commandVariant)
+      else:
+        self.runPython(view, qv_executable, commandVariant)
   def runPython(self, view, qv_executable, commandVariant=None):
     self.window.run_command('save')
     firstLine = view.substr(view.line(0))
@@ -44,7 +48,7 @@ class QlikviewReloadCommand(sublime_plugin.WindowCommand):
       else:
         self.window.run_command("exec", { "cmd": ["cmd","/C",qv_executable,qvwFile]})
   def runCli(self, view, qv_executable, commandVariant=None):
-    file_regex = "^>* Parse error. File: \"(...*?)\", line: ([0-9]*)"
+    file_regex = "^>* Parse error. File: \"(...*?)\", line: ([0-9]*)"    
     scriptPath = "%s\\Inqlik-Tools\\bin\\inqlik.bat" % sublime.packages_path()
     fileName = view.file_name() 
     if commandVariant is None:
@@ -57,4 +61,14 @@ class QlikviewReloadCommand(sublime_plugin.WindowCommand):
       print([scriptPath,"qvs", "--command=%s" % cliCommand, fileName])
     else:
       self.window.run_command("exec", { "file_regex": file_regex, "cmd": [scriptPath,"qvs", "--command=open",fileName]})
+  def runByInfovizion(self, view, commandVariant=None):    
+    file_regex = "^File: (.+), line: (.+)"
+    executable = "c:\\Programs\\infovizion\\bin\\dart"
+    snapshot = "c:\\Programs\\infovizion\\bin\\infovizion.dart.snapshot"
+    work_dir = "c:\\Programs\\infovizion\\"
+    fileName = view.file_name() 
+    if view.settings().get('qv_script_check_syntax') == True:
+      dummy = True
+    self.window.run_command("exec", { "working_dir": work_dir, "file_regex": file_regex, "cmd": [executable, snapshot,"sense","app-reload", "--script", fileName]})    
+
 
