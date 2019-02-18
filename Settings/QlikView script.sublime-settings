@@ -11,5 +11,7 @@
   // - "force_reload": Check syntax, reload qvw file even if errors found
   "qv_script_check_syntax_mode": "check_and_reload",
   // Implicit include file (use it for example to declare predefined variables of QlikView Deployment Framework) 
-  "qv_script_check_syntax_impicit_include_file": "default_inqlude.qvs"
+  "qv_script_check_syntax_impicit_include_file": "default_inqlude.qvs",
+  // For internal use
+  "use_infovizion": false
 }
