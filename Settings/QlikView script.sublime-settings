@@ -13,5 +13,5 @@
   // Implicit include file (use it for example to declare predefined variables of QlikView Deployment Framework) 
   "qv_script_check_syntax_impicit_include_file": "default_inqlude.qvs",
   // For internal use
-  "use_infovizion": false
+  "infovizion_user": ""
 }
