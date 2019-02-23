@@ -1,4 +1,6 @@
 {
+    // For internal use
+  "use_infovizion": false,
   "qv_executable": "c:\\Program Files\\QlikView\\qv.exe",
   // If set to false, Open qvw file and Reload qvw file command would run by internal python script
   // If set to true they would use inqlik command line application (inqlik CLI)
@@ -12,6 +14,4 @@
   "qv_script_check_syntax_mode": "check_and_reload",
   // Implicit include file (use it for example to declare predefined variables of QlikView Deployment Framework) 
   "qv_script_check_syntax_impicit_include_file": "default_inqlude.qvs",
-  // For internal use
-  "infovizion_user": ""
 }
