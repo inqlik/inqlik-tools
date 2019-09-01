@@ -189,10 +189,11 @@ class QvVarFileReader:
         self.NAME_MAP = {}
         mappings = self.modulesettings.get('mappings',{})
         for tag in self.ALLOWED_TAGS:
-            self.NAME_MAP[tag] = mappings.get(tag,tag);
+            self.NAME_MAP[tag] = mappings.get(tag,tag)
         self.NAME_MAP['separator'] = self.modulesettings.get('separator','.')
         expression = {}
         defs = {}
+        surrogateNames = {}
         define_directives = {}
         self.linenum = 0
         self.macro = []
@@ -218,10 +219,25 @@ class QvVarFileReader:
         def process_expression(exp):
             if exp == {}:
                 return None
-            if exp.get('name') is None:
-                return'Parsing error: `name` property is absent'
-            if exp['name'] in defs:
-                return 'Parsing error: duplicate expression with name `%s`' % exp['name']
+            expFamily = exp.get('family')
+            expType = exp.get('type')
+            expCalendar = exp.get('calendar')
+            surrogateName = ''
+            if ((expFamily is not None) and (expType is not None)):
+              surrogateName = expFamily + '|' + expType
+              if (expCalendar is not None):
+                  surrogateName = surrogateName + '|' + expCalendar
+            name = exp.get('name')
+            if (name is None):
+                if (surrogateName == ''):
+                    return 'Parsing error: `name` property (or family, type, calendar) is absent'
+                else:
+                    name = surrogateName 
+                    exp['name'] = name
+            if name in defs:
+                return 'Parsing error: duplicate expression with name `%s`' % name
+            if surrogateName in surrogateNames:
+                return 'Parsing error: duplicate expression with surrogate name `%s`' % surrogateName
             if exp.get('definition') is not None and exp.get('macro') is not None:
                return 'Parsing error: Expression have defined both `definition` and `macro` property. Something one must be defined'
             if exp.get('definition') is None:
@@ -232,13 +248,16 @@ class QvVarFileReader:
             for k, v in define_directives.items():
                 local_def = local_def.replace(k,v)
             exp['definition'] = local_def
-            defs[exp['name']] = exp['definition']
+            defs[name] = exp['definition']
+            if (surrogateName != ''):
+               surrogateNames[surrogateName] = 0
             comment = exp.get('Description')
             tag = exp.get('tag')
             if tag is None:
                 tag = self.currentSection
             command = exp.get('command')
-            name = exp.get('name')
+            if (command is None):
+                command = name
             self.expressions.append(exp)
             self.put_row(name,expression['definition'],command, comment, tag)
             for key in exp.keys():
